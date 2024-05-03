@@ -10,7 +10,7 @@ namespace Ejemplo1
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Hola_Mundo();
         }
 
         protected override void OnStart()
