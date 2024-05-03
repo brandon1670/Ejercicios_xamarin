@@ -1,4 +1,6 @@
 ﻿using System;
+using SQLite;
+
 namespace Ejemplo1.Models
 {
     public class TodoItem
