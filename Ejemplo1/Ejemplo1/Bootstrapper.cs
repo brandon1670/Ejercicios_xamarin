@@ -1,29 +1,25 @@
-﻿using Ejemplo1;
-using Autofac;
+﻿using Autofac;
 using System.Linq;
 using System.Reflection;
 using Xamarin.Forms;
-using Ejemplo1.Views;
-using Ejemplo1.ViewModels;
 using Ejemplo1.Repositories;
-using System;
+
 namespace Ejemplo1
 {
     public abstract class Bootstrapper
     {
-        protected ContainerBuilder ContainerBuilder
-        { get; private set; }
+        static ContainerBuilder ContainerBuilder
+        { get;  set; }
         public Bootstrapper()
         {
             Initialize();
             FinishInitialization();
         }
-        protected virtual void Initialize()
+        public static void Initialize()
         {
             var currentAssembly = Assembly.GetExecutingAssembly();
             ContainerBuilder = new ContainerBuilder();
-            foreach (var type in currentAssembly.DefinedTypes
-                                                    .Where(e =>
+            foreach (var type in currentAssembly.DefinedTypes.Where(e =>
                                                            e.IsSubclassOf(typeof(Page)) ||
                                                            e.IsSubclassOf(typeof(ViewModel))))
             {
