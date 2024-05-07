@@ -4,4 +4,4 @@
     {
         var instance = new Bootstrapper();
     }
-}
+}

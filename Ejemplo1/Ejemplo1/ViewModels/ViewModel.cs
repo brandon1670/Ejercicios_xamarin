@@ -14,4 +14,4 @@ public abstract class ViewModel : INotifyPropertyChanged
     }
 
     public INavigation Navigation { get; set; }
-}
+}

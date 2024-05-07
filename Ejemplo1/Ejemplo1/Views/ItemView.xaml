@@ -4,17 +4,17 @@
              x:Class="Ejemplo1.ItemView"
              Title="New todo item">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Guardar"/>
+        <ToolbarItem Text="Save"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout Padding="14">
-        <Label Text="Titulo"/>
+        <Label Text="Title"/>
         <Entry />
-        <Label Text="Pendiente"/>
+        <Label Text="Due"/>
         <DatePicker />
         <StackLayout Orientation="Horizontal">
             <Switch />
-            <Label Text="Completado"/>
+            <Label Text="Completed"/>
         </StackLayout>
         
     </StackLayout>

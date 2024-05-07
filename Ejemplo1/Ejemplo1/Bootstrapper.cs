@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Ejemplo1.Views;
 using Ejemplo1.ViewModels;
 using Ejemplo1.Repositories;
+using System;
 namespace Ejemplo1
 {
     public abstract class Bootstrapper
@@ -22,9 +23,9 @@ namespace Ejemplo1
             var currentAssembly = Assembly.GetExecutingAssembly();
             ContainerBuilder = new ContainerBuilder();
             foreach (var type in currentAssembly.DefinedTypes
-                    .Where(e =>
-                           e.IsSubclassOf(typeof(Page)) ||
-                           e.IsSubclassOf(typeof(ViewModel))))
+                                                    .Where(e =>
+                                                           e.IsSubclassOf(typeof(Page)) ||
+                                                           e.IsSubclassOf(typeof(ViewModel))))
             {
                 ContainerBuilder.RegisterType(type.AsType());
             }
