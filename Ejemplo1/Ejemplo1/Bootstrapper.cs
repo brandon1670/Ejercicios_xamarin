@@ -1,12 +1,11 @@
-﻿using Autofac;
+﻿using Ejemplo1;
+using Autofac;
 using System.Linq;
 using System.Reflection;
 using Xamarin.Forms;
 using Ejemplo1.Views;
-using Ejemplo1.Repositories;
 using Ejemplo1.ViewModels;
-using Ejemplo1;
-using System;
+using Ejemplo1.Repositories;
 namespace Ejemplo1
 {
     public abstract class Bootstrapper
@@ -35,11 +34,6 @@ namespace Ejemplo1
         {
             var container = ContainerBuilder.Build();
             Resolver.Initialize(container);
-        }
-
-        public static void Init()
-        {
-            throw new NotImplementedException();
         }
     }
 }
