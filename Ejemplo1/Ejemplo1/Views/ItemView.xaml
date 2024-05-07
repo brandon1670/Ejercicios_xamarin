@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejemplo1.ItemView"
+             Title="New todo item">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="14">
+        <Label Text="Titulo"/>
+        <Entry />
+        <Label Text="Pendiente"/>
+        <DatePicker />
+        <StackLayout Orientation="Horizontal">
+            <Switch />
+            <Label Text="Completado"/>
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ejemplo1.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Ejemplo1
         {
             InitializeComponent();
 
-            MainPage = new Hola_Mundo();
+            MainPage = new NavigationPage(Resolver.Resolve<MainView>());
         }
 
         protected override void OnStart()
