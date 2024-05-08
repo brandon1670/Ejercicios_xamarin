@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Ejemplo1"
+             xmlns:converters="clr-namespace:Ejemplo1.Converters"
              x:Class="Ejemplo1.Views.MainView"
              Title="Ejemplo1!">
     <ContentPage.ToolbarItems>
