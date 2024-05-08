@@ -7,9 +7,9 @@ public class MainViewModel : ViewModel
     public MainViewModel(TodoItemRepository repository)
     {
         this.repository = repository;
-        Task.Run(async () => await LoadData());
+        Task.Run(() => LoadData());
     }
-    private async Task LoadData()
+    private void LoadData()
     {
 
     }
